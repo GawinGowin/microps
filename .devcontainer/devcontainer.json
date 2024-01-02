@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"-it", "--rm",
+		"--privileged",
+		"--name", "microps-container"
+	],
+	"workspaceFolder": "/workspaces",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=delegated",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"kube.42header",
+				"tomoki1207.pdf",
+				"mhutchie.git-graph",
+				"GitHub.copilot"
+			],
+			"settings": {
+				"C_Cpp.default.cStandard": "gnu99",
+				"42header.email": "saraki@student.42tokyo.jp",
+				"42header.username": "saraki"
+			}
+		}
+	},
+	"remoteUser": "root"
+}
